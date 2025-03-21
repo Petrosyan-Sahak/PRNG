@@ -1,0 +1,77 @@
+1. What are PRNGs
+2. Motivation
+3. Formal definition
+4. early examples (middle square, lcg)
+5. why they dont work even for statistical purposes
+6. lfsr, gfsr and marsenne twister
+7. the construction of marsenne twister
+8. CSPRNGs
+9. how to generate arbitrary distribution given PRNG for uniform distribution
+10. randomness tests (how do we know that the generated sequence has the desired properties we wanted)
+
+
+
+Introduction to PRNGs
+
+    What are PRNGs?
+    Difference between true random and pseudorandom numbers
+    Applications of PRNGs (simulation, cryptography, gaming, etc.)
+
+Motivation for Studying PRNGs
+
+    Why do we need PRNGs?
+    Challenges of using true random sources
+    Trade-offs: Speed vs. security vs. statistical quality
+
+Formal Definition of PRNGs
+
+    PRNG as a deterministic algorithm
+    Seed, state, and output sequence
+    Desirable properties: Periodicity, uniformity, independence
+
+Early PRNGs and Their Issues
+
+    Middle-square method (Von Neumann, 1949)
+    Linear Congruential Generator (LCG)
+        Definition and formula
+        Example: MINSTD (used in early computing)
+    Why Early PRNGs Failed
+        Short cycles and correlations
+        Poor randomness quality in higher dimensions
+
+Improved PRNGs: LFSR, GFSR, and Mersenne Twister
+
+    Linear Feedback Shift Register (LFSR)
+        How it works and why it’s fast
+        Used in hardware applications
+    Generalized Feedback Shift Register (GFSR)
+    Mersenne Twister (MT19937)
+        Addressing issues of older PRNGs
+        Period length of 219937−1219937−1
+
+Deep Dive into the Mersenne Twister Construction
+
+    Twisting transformation
+    Tempering for better statistical properties
+    Strengths and weaknesses (e.g., not cryptographically secure)
+
+Cryptographically Secure PRNGs (CSPRNGs)
+
+    What makes a PRNG cryptographically secure?
+    Examples:
+        Blum Blum Shub (BBS)
+        Fortuna
+        Cryptographic hash-based PRNGs (e.g., SHA-based)
+    Comparison with standard PRNGs
+
+Generating Arbitrary Distributions from a Uniform PRNG
+
+    Inverse transform sampling
+    Rejection sampling
+    Box-Muller transform (for normal distribution)
+
+Modern Applications and Future Directions
+
+    Quantum random number generators (QRNGs)
+    PRNGs in machine learning and Monte Carlo methods
+    Randomness tests (Diehard, TestU01, NIST tests)
