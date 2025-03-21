@@ -3,12 +3,13 @@
 3. Formal definition
 4. early examples (middle square, lcg)
 5. why they dont work even for statistical purposes
-6. lfsr, gfsr and marsenne twister
+6. lfsr, gfsr and marsenne twister, counter based prngs
 7. the construction of marsenne twister
 8. CSPRNGs
 9. how to generate arbitrary distribution given PRNG for uniform distribution
 10. randomness tests (how do we know that the generated sequence has the desired properties we wanted)
-
+11. PRNGs used in modern libraries (specifically ML related) PCG64, MT19937
+12. parallel prngs Philox, Threefry (used in tensorflow), xoshiro
 
 
 Introduction to PRNGs
